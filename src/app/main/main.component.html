@@ -1,0 +1,8 @@
+<div style="text-align:center">
+  <button (click)="giveRandomKey(userKey)">Jouer</button>
+  <p>Lettre choisie : {{ randomKey }}</p>
+
+  <p>Votre lettre :
+    <input (keyup)="getUserKey($event)" #userKey>
+  </p>
+</div>
