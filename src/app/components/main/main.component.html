@@ -1,5 +1,8 @@
 <div style="text-align:center">
-  <button (click)="giveRandomKey(userKey)">Jouer</button>
+  <div class="playersStats">
+    <app-players></app-players>
+  </div>
+  <button (click)="giveRandomKey(userKey)">Combattre !</button>
   <p>Lettre choisie : {{ randomKey }}</p>
 
   <p>Votre lettre :

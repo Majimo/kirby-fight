@@ -25,8 +25,6 @@ export class MainComponent {
   getUserKey(event: any) {
     var millis = Math.floor((Date.now() - MainComponent.start) / 100);
     this.userValue = event.target.value;
-    console.log(this.userValue.toUpperCase());
-    console.log(this.randomKey);
     if (this.userValue.toUpperCase() === this.randomKey && millis <= 20) {
       console.log("Secondes écoulées : " + millis / 10);
       console.log("Vous avez pressé la lettre : " + this.userValue.toUpperCase());
