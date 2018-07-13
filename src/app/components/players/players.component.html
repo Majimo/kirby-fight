@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let player of players" id="player{{ player.id }}">
-    {{ player.name}} | {{ player.life}}
+  <li *ngFor="let player of players">
+    {{ player.name}}<div id="life-player{{ player.id }}">{{ player.life}}</div>
   </li>
 </ul>
