@@ -11,6 +11,7 @@ export class MainComponent {
   static start: number;
   randomNumber: number;
   randomKey: string;
+  countDown: string;
   userValue: string;
   playerLife: number;
   ennemyLife: number;
@@ -24,6 +25,7 @@ export class MainComponent {
 
     // Reset timer and userKey
     MainComponent.start = Date.now();
+    this.setCountDown(MainComponent.start);
     userKey.value = null;
 
     // Select a random key
@@ -45,4 +47,20 @@ export class MainComponent {
     }
   }
 
+  setCountDown(time) {
+    var x = setInterval(function() {
+      var passed = time - Date.now();
+      var millis = - Math.floor((passed / 100));
+      this.countDown = (millis / 10) + "s...";
+      var element = document.getElementById("timePassed");
+      element.innerHTML = this.countDown;
+
+      if (millis >= 20) {
+        element.setAttribute("style", "color:orange");
+      }
+      if (millis >= 30) {
+        element.setAttribute("style", "color:red");
+      }
+    }, 100);
+  }
 }

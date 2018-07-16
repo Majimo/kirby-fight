@@ -3,8 +3,8 @@
     <app-players></app-players>
   </div>
   <button (click)="giveRandomKey(userKey)">Combattre !</button>
-  <p>Lettre à trouver : <span class="random-key">{{ randomKey }}</span></p>
-
+  <p>Lettre choisie par l'adversaire : <span class="random-key">{{ randomKey }}</span></p>
+  <p id="timePassed">{{ countDown }}</p>
   <p>Votre lettre :
     <input (keyup)="getUserKey($event)" #userKey>
   </p>
