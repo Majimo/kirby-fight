@@ -7,20 +7,22 @@ import { Component } from '@angular/core';
 })
 export class FightResultComponent {
 
-  constructor() { }
+  fightResult;
+
+  constructor() {
+    this.fightResult = document.getElementById("fight-result");
+  }
 
   playerWin(millis, userValue) {
-    document.getElementById("fight-result").innerHTML = "L'ennemi perd un point de vie !";
-    console.log("Secondes écoulées : " + millis / 10);
-    console.log("Vous avez pressé la lettre : " + userValue.toUpperCase());
-    console.log("L'ennemi perd un point de vie !");
+    this.fightResult.innerHTML = "Secondes écoulées : " + millis / 10 + "<br>";
+    this.fightResult.innerHTML += "Vous avez pressé la lettre : " + userValue.toUpperCase() + "<br>";
+    this.fightResult.innerHTML += "L'ennemi perd un point de vie !";
   }
 
   ennemyWin(millis, userValue) {
-    document.getElementById("fight-result").innerHTML = "Vous perdez un point de vie !";
-    console.log("Secondes écoulées : " + millis / 10);
-    console.log("Vous avez pressé la lettre : " + userValue.toUpperCase());
-    console.log("Vous perdez un point de vie !");
+    this.fightResult.innerHTML = "Secondes écoulées : " + millis / 10 + "<br>";
+    this.fightResult.innerHTML += "Vous avez pressé la lettre : " + userValue.toUpperCase() + "<br>";
+    this.fightResult.innerHTML += "Vous perdez un point de vie !";
   }
 
 }

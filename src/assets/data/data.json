@@ -2,11 +2,13 @@
     {
         "id" : 1,
         "name" : "Kirby",
+        "image" : "assets\\Fighter_Kirby.png",
         "life" : 10
     },
     {
         "id": 2,
         "name": "Knuckle Joe",
+        "image": "assets\\Knuckle_Joe.png",
         "life": 10
     }
 ]

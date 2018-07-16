@@ -1,6 +1,7 @@
 <ul>
   <li *ngFor="let player of players">
-    {{ player.name}}<div id="life-player{{ player.id }}">{{ player.life}}</div>
+    <img src="{{ player.image }}" alt="fighter Kirby Fight">
+    {{ player.name }}<div id="life-player{{ player.id }}">{{ player.life }}</div>
   </li>
 </ul>
 <fight-result></fight-result>
