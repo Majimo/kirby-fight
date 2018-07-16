@@ -1,7 +1,9 @@
-ul {
-    list-style: none;
-    padding-left: 0;
-    img {
-        height: 6em;
-    }
+img {
+    height: 6em;
+}
+.player-name {
+    font-weight: bold;
+}
+.life-player {
+    color: red;
 }

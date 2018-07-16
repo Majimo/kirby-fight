@@ -1,7 +1,10 @@
-<ul>
-  <li *ngFor="let player of players">
-    <img src="{{ player.image }}" alt="fighter Kirby Fight">
-    {{ player.name }}<div id="life-player{{ player.id }}">{{ player.life }}</div>
-  </li>
-</ul>
+<div class="col-md-10 offset-md-1">
+  <div class="row">
+    <div *ngFor="let player of players" class="col">
+      <img src="{{ player.image }}" alt="fighter Kirby Fight">
+      <div class="col player-name">{{ player.name }}</div>
+      <div id="life-player{{ player.id }}" class="col life-player">{{ player.life }}</div>
+    </div>
+  </div>
+</div>
 <fight-result></fight-result>
