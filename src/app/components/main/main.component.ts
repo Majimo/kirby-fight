@@ -61,6 +61,10 @@ export class MainComponent {
       if (millis >= 30) {
         element.setAttribute("style", "color:red");
       }
+      if (millis >= 35) {
+        clearInterval(x);
+        element.innerHTML = "";
+      }
     }, 100);
   }
 }
